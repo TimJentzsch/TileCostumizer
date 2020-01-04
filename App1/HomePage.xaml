@@ -19,12 +19,12 @@
             <Button Padding="0">
                 <Rectangle Height="50" Width="50">
                     <Rectangle.Fill>
-                        <SolidColorBrush Color="{x:Bind myColorPicker.Color, Mode=OneWay}"/>
+                        <SolidColorBrush Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
                     </Rectangle.Fill>
                 </Rectangle>
                 <Button.Flyout>
                     <Flyout>
-                        <ColorPicker x:Name="myColorPicker"
+                        <ColorPicker x:Name="colorPicker"
                  ColorSpectrumShape="Ring"
                  IsColorPreviewVisible="False"/>
                     </Flyout>
@@ -33,14 +33,18 @@
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14">
                 Text Color:
             </TextBlock>
-            <RadioButton IsChecked="True">Light</RadioButton>
-            <RadioButton>Dark</RadioButton>
+            <StackPanel>
+                <RadioButton GroupName="TextColor" Checked="TextColorRadioButton_Checked" Tag="Light" IsChecked="True">Light</RadioButton>
+                <RadioButton GroupName="TextColor" Checked="TextColorRadioButton_Checked" Tag="Dark">Dark</RadioButton>
+            </StackPanel>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14">
                 Tile Text:
             </TextBlock>
-            <CheckBox>On Small Tile</CheckBox>
-            <CheckBox>On Medium Tile</CheckBox>
-            <CheckBox>On Big Tile</CheckBox>
+            <StackPanel>
+                <CheckBox Click="TextOnCheckbox_Click" Tag="Small">On Small Tile</CheckBox>
+                <CheckBox Click="TextOnCheckbox_Click" Tag="Medium" IsChecked="True">On Medium Tile</CheckBox>
+                <CheckBox Click="TextOnCheckbox_Click" Tag="Large" IsChecked="True">On Big Tile</CheckBox>
+            </StackPanel>
         </ListView>
     </Grid>
 </Page>

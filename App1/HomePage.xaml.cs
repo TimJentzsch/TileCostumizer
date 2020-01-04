@@ -22,9 +22,56 @@ namespace App1
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        public ApplicationTile ApplicationTile { get; set; }
+
         public HomePage()
         {
             this.InitializeComponent();
+        }
+
+        private void TextColorRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+
+            if (rb != null && ApplicationTile != null)
+            {
+                string colorName = rb.Tag.ToString();
+                // Set the text color of the tile
+                switch (colorName)
+                {
+                    case "Light":
+                        ApplicationTile.TextColor = TextColor.LIGHT;
+                        break;
+                    case "Dark":
+                        ApplicationTile.TextColor = TextColor.DARK;
+                        break;
+                }
+            }
+        }
+
+        private void TextOnCheckbox_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+
+            if (cb != null && ApplicationTile != null)
+            {
+                string tileType = cb.Tag.ToString();
+                bool isChecked = cb.IsChecked ?? false;
+                // Set the text on the specified tile type
+                switch (tileType)
+                {
+                    case "Small":
+                        ApplicationTile.TextOnSmall = isChecked;
+                        break;
+                    case "Medium":
+                        ApplicationTile.TextOnMedium = isChecked;
+                        break;
+                    case "Large":
+                        ApplicationTile.TextOnLarge = isChecked;
+                        break;
+
+                }
+            }
         }
     }
 }
