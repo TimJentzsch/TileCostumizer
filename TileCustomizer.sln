@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1.csproj", "{0EA8978C-A0BD-4F5F-B130-A4FE966DB2E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileCustomizer", "App1\TileCustomizer.csproj", "{0EA8978C-A0BD-4F5F-B130-A4FE966DB2E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
