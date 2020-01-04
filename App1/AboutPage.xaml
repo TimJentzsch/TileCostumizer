@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+        <ListView>
+            <TextBlock TextWrapping="Wrap">
+                A tool to customize the Windows start menu tiles, such as changing the background color.
+                The source code is available on <Hyperlink NavigateUri="https://github.com/TimJentzsch/TileCostumizer">GitHub</Hyperlink>.
+            </TextBlock>
+        </ListView>
     </Grid>
 </Page>
