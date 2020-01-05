@@ -11,8 +11,10 @@
     <Grid>
         <ListView>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14">
-                Application:
+                Application: 
             </TextBlock>
+            <TextBlock x:Name="ApplicationName" Text="{x:Bind ApplicationTile.Name}"/>
+            <Button Click="BrowseApplication_Click">Browse...</Button>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14">
                 Background Color:
             </TextBlock>

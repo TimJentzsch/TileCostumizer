@@ -14,8 +14,10 @@ namespace App1
         public static readonly bool DEFAULT_TEXT_ON_SMALL = false;
         public static readonly bool DEFAULT_TEXT_ON_MEDIUM = true;
         public static readonly bool DEFAULT_TEXT_ON_LARGE = true;
+        public static readonly string DEFAULT_APPLICATION_NAME = "";
 
         public string Path { get; set; }
+        public string Name { get; set; }
         public TextColor TextColor { get; set; }
         public Color BackgroundColor { get; set; }
         public bool TextOnSmall { get; set; }
@@ -26,6 +28,7 @@ namespace App1
         {
             Path = path;
             // Set the fields to their default value
+            Name = DEFAULT_APPLICATION_NAME;
             TextColor = DEFAULT_TEXTCOLOR;
             BackgroundColor = DEFAULT_BACKGROUND_COLOR;
 
